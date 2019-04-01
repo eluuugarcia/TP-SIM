@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns:fx="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <SplitPane dividerPositions="0.2182628062360802, 0.5" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0">
+      <items>
+        <AnchorPane fx:id="pantallaIzquierda" prefHeight="569.0" prefWidth="183.0">
+          <children>
+            <Label fx:id="lblX0" alignment="CENTER" layoutX="14.0" layoutY="56.0" prefHeight="21.0" prefWidth="37.0" style="&#10;" text="Xo" textAlignment="CENTER" visible="false" wrapText="false">
+              <font>
+                <Font size="18.0" fx:id="x111" />
+              </font>
+              <textFill>
+                <Color blue="0.624" green="0.624" red="0.624" fx:id="x211" />
+              </textFill>
+            </Label>
+            <TextField fx:id="txtX0" layoutX="82.0" layoutY="54.0" prefHeight="20.0" prefWidth="75.0" visible="false" />
+            <Label fx:id="lblk" alignment="CENTER" layoutX="14.0" layoutY="111.0" prefHeight="21.0" prefWidth="37.0" style="&#10;" text="k" textAlignment="CENTER" visible="false" wrapText="false">
+              <font>
+                <Font size="18.0" fx:id="x1111" />
+              </font>
+              <textFill>
+                <Color blue="0.624" green="0.624" red="0.624" fx:id="x2111" />
+              </textFill>
+            </Label>
+            <TextField fx:id="txtK" layoutX="82.0" layoutY="109.0" prefHeight="20.0" prefWidth="75.0" visible="false" />
+            <Label fx:id="lblg" alignment="CENTER" layoutX="14.0" layoutY="169.0" prefHeight="21.0" prefWidth="37.0" style="&#10;" text="g" textAlignment="CENTER" visible="false" wrapText="false">
+              <font>
+                <Font size="18.0" fx:id="x11111" />
+              </font>
+              <textFill>
+                <Color blue="0.624" green="0.624" red="0.624" fx:id="x21111" />
+              </textFill>
+            </Label>
+            <TextField fx:id="txtG" layoutX="82.0" layoutY="167.0" prefHeight="20.0" prefWidth="75.0" visible="false" />
+            <Label fx:id="lblc" alignment="CENTER" layoutX="14.0" layoutY="231.0" prefHeight="21.0" prefWidth="37.0" style="&#10;" text="c" textAlignment="CENTER" visible="false" wrapText="false">
+              <font>
+                <Font size="18.0" fx:id="x111111" />
+              </font>
+              <textFill>
+                <Color blue="0.624" green="0.624" red="0.624" fx:id="x211111" />
+              </textFill>
+            </Label>
+            <TextField fx:id="txtC" layoutX="82.0" layoutY="228.0" prefHeight="20.0" prefWidth="75.0" visible="false" />
+            <TextField fx:id="txtM" layoutX="24.0" layoutY="291.0" prefHeight="26.0" prefWidth="144.0" promptText="Cantidad a generar" visible="false" />
+            <TextField fx:id="txtIntervalos" layoutX="24.0" layoutY="362.0" prefHeight="26.0" prefWidth="144.0" promptText="Cantidad de intervalos" visible="false">
+              <font>
+                <Font size="11.0" />
+              </font>
+            </TextField>
+            <Button fx:id="btnGenerar" layoutX="49.0" layoutY="438.0" mnemonicParsing="false" onAction="#generar" prefHeight="40.0" prefWidth="94.0" text="GENERAR" visible="false">
+              <font>
+                <Font size="14.0" />
+              </font>
+            </Button>
+                  <Hyperlink fx:id="btnVolverA" onAction="#volverA" text="← Volver al Menú" underline="true" visible="false" />
+                  <Hyperlink fx:id="btnVolverMenu" layoutX="10.0" layoutY="10.0" onAction="#volverMenu" text="← Volver al Menú Principal" underline="true" visible="false" />
+                  <Button fx:id="btnClear" layoutX="59.0" layoutY="448.0" mnemonicParsing="false" onAction="#generar" prefHeight="40.0" prefWidth="94.0" text="LIMPIAR" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+          </children>
+        </AnchorPane>
+        <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="628.0" prefWidth="440.0">
+          <children>
+                  <AnchorPane id="Content" fx:id="pantallaMenuA" layoutX="10.0" layoutY="10.0" minHeight="-1.0" minWidth="-1.0" prefHeight="608.0" prefWidth="315.0" visible="false">
+                     <children>
+                        <Button fx:id="btnMultiplicativo" layoutX="46.0" layoutY="265.0" mnemonicParsing="false" onAction="#metodoMultiplicativo" prefHeight="63.0" prefWidth="206.0" text="MÉTODO MULTIPLICATIVO" visible="false">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnLineal" layoutX="49.0" layoutY="106.0" mnemonicParsing="false" onAction="#metodoLineal" prefHeight="62.0" prefWidth="199.0" text="MÉTODO LINEAL" visible="false">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane id="Content" fx:id="pantallaNrosAleatorios" layoutX="10.0" layoutY="10.0" minHeight="-1.0" minWidth="-1.0" prefHeight="608.0" prefWidth="315.0" visible="false">
+                     <children>
+                        <TableView fx:id="tablaNums" layoutX="14.0" layoutY="19.0" prefHeight="393.0" prefWidth="252.0" />
+                        <Button fx:id="btnNext" layoutX="164.0" layoutY="482.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="102.0" text="GENERAR OTRO" textAlignment="JUSTIFY">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="lblm" alignment="CENTER" layoutX="14.0" layoutY="446.0" prefHeight="21.0" prefWidth="37.0" style="&#10;" text="m" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="18.0" fx:id="x11211" />
+                           </font>
+                           <textFill>
+                              <Color blue="0.624" green="0.624" red="0.624" fx:id="x21211" />
+                           </textFill>
+                        </Label>
+                        <Label fx:id="lbla" alignment="CENTER" layoutX="14.0" layoutY="485.0" prefHeight="21.0" prefWidth="37.0" style="&#10;" text="a" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="18.0" fx:id="x112111" />
+                           </font>
+                           <textFill>
+                              <Color blue="0.624" green="0.624" red="0.624" fx:id="x212111" />
+                           </textFill>
+                        </Label>
+                        <TextField fx:id="txtm" disable="true" layoutX="69.0" layoutY="444.0" prefHeight="26.0" prefWidth="50.0" />
+                        <TextField fx:id="txta" disable="true" layoutX="69.0" layoutY="483.0" prefHeight="26.0" prefWidth="49.0" />
+                        <AnchorPane id="Content" fx:id="pantallaPuntoA1" layoutX="10.0" layoutY="10.0" minHeight="-1.0" minWidth="-1.0" prefHeight="608.0" prefWidth="315.0" visible="false">
+                           <children>
+                              <Button fx:id="btnMultiplicativo1" layoutX="46.0" layoutY="265.0" mnemonicParsing="false" onAction="#metodoMultiplicativo" prefHeight="63.0" prefWidth="206.0" text="MÉTODO MULTIPLICATIVO" visible="false">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnLineal1" layoutX="49.0" layoutY="106.0" mnemonicParsing="false" onAction="#metodoLineal" prefHeight="62.0" prefWidth="199.0" text="MÉTODO LINEAL" visible="false">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <TextField disable="true" visible="false" />
+                  <AnchorPane id="Content" fx:id="pantallaMenu" layoutX="10.0" layoutY="10.0" minHeight="-1.0" minWidth="-1.0" prefHeight="628.0" prefWidth="440.0">
+                     <children>
+                        <Button fx:id="btnB" layoutX="50.0" layoutY="266.0" mnemonicParsing="false" onAction="#puntoB" prefHeight="62.0" prefWidth="199.0" text="PUNTO B">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnA" layoutX="49.0" layoutY="106.0" mnemonicParsing="false" onAction="#puntoA" prefHeight="62.0" prefWidth="199.0" text="PUNTO A">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnC" layoutX="50.0" layoutY="415.0" mnemonicParsing="false" onAction="#puntoC" prefHeight="62.0" prefWidth="199.0" text="PUNTO C">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane id="Content" fx:id="pantallaMenuA1" layoutX="10.0" layoutY="10.0" minHeight="-1.0" minWidth="-1.0" prefHeight="608.0" prefWidth="315.0" visible="false">
+                           <children>
+                              <Button fx:id="btnMultiplicativo1" layoutX="46.0" layoutY="265.0" mnemonicParsing="false" onAction="#metodoMultiplicativo" prefHeight="63.0" prefWidth="206.0" text="MÉTODO MULTIPLICATIVO" visible="false">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnLineal1" layoutX="49.0" layoutY="106.0" mnemonicParsing="false" onAction="#metodoLineal" prefHeight="62.0" prefWidth="199.0" text="MÉTODO LINEAL" visible="false">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane id="Content" fx:id="pantallaNrosAleatorios1" layoutX="10.0" layoutY="10.0" minHeight="-1.0" minWidth="-1.0" prefHeight="608.0" prefWidth="315.0">
+                           <children>
+                              <TableView fx:id="tablaNums1" layoutX="14.0" layoutY="19.0" prefHeight="393.0" prefWidth="252.0" visible="false" />
+                              <Button fx:id="btnNext1" layoutX="164.0" layoutY="482.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="102.0" text="GENERAR OTRO" textAlignment="JUSTIFY" visible="false">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="lblm1" alignment="CENTER" layoutX="14.0" layoutY="446.0" prefHeight="21.0" prefWidth="37.0" style="&#10;" text="m" textAlignment="CENTER" visible="false" wrapText="false">
+                                 <font>
+                                    <Font size="18.0" fx:id="x112111" />
+                                 </font>
+                                 <textFill>
+                                    <Color blue="0.624" green="0.624" red="0.624" fx:id="x212111" />
+                                 </textFill>
+                              </Label>
+                              <Label fx:id="lbla1" alignment="CENTER" layoutX="14.0" layoutY="485.0" prefHeight="21.0" prefWidth="37.0" style="&#10;" text="a" textAlignment="CENTER" visible="false" wrapText="false">
+                                 <font>
+                                    <Font size="18.0" fx:id="x1121111" />
+                                 </font>
+                                 <textFill>
+                                    <Color blue="0.624" green="0.624" red="0.624" fx:id="x2121111" />
+                                 </textFill>
+                              </Label>
+                              <TextField fx:id="txtm1" disable="true" layoutX="69.0" layoutY="444.0" prefHeight="26.0" prefWidth="50.0" visible="false" />
+                              <TextField fx:id="txta1" disable="true" layoutX="69.0" layoutY="483.0" prefHeight="26.0" prefWidth="49.0" visible="false" />
+                              <AnchorPane id="Content" fx:id="pantallaPuntoA11" layoutX="10.0" layoutY="10.0" minHeight="-1.0" minWidth="-1.0" prefHeight="608.0" prefWidth="315.0" visible="false">
+                                 <children>
+                                    <Button fx:id="btnMultiplicativo11" layoutX="46.0" layoutY="265.0" mnemonicParsing="false" onAction="#metodoMultiplicativo" prefHeight="63.0" prefWidth="206.0" text="MÉTODO MULTIPLICATIVO" visible="false">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnLineal11" layoutX="49.0" layoutY="106.0" mnemonicParsing="false" onAction="#metodoLineal" prefHeight="62.0" prefWidth="199.0" text="MÉTODO LINEAL" visible="false">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <TextField disable="true" visible="false" />
+                     </children>
+                  </AnchorPane>
+          </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="569.0" prefWidth="383.0">
+          <children>
+                  <AnchorPane fx:id="pantallaHistograma" layoutX="10.0" layoutY="10.0" prefHeight="569.0" prefWidth="383.0">
+                     <children>
+                        <Button fx:id="btnVerTablaChi1" layoutX="248.0" layoutY="481.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="105.0" text="TABLA" visible="false">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pantallaChiCuadrado" layoutX="10.0" layoutY="10.0" prefHeight="569.0" prefWidth="383.0">
+                     <children>
+                        <TableView fx:id="tablaChiCuadrado1" layoutX="14.0" layoutY="14.0" prefHeight="395.0" prefWidth="366.0" visible="false" />
+                        <Label fx:id="lblCac1" alignment="CENTER" layoutX="14.0" layoutY="433.0" prefHeight="21.0" prefWidth="61.0" style="&#10;" text="C(ac)" textAlignment="CENTER" visible="false" wrapText="false">
+                           <font>
+                              <Font size="18.0" fx:id="x112211" />
+                           </font>
+                           <textFill>
+                              <Color blue="0.624" green="0.624" red="0.624" fx:id="x212211" />
+                           </textFill>
+                        </Label>
+                        <TextField fx:id="txtCac1" disable="true" layoutX="94.0" layoutY="431.0" prefHeight="26.0" prefWidth="82.0" visible="false" />
+                        <Button fx:id="btnVerHistograma1" layoutX="248.0" layoutY="481.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="105.0" text="HISTOGRAMA" visible="false">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="lblChi1" alignment="CENTER" layoutX="14.0" layoutY="487.0" prefHeight="21.0" prefWidth="44.0" style="&#10;" text="X" textAlignment="CENTER" visible="false" wrapText="false">
+                           <font>
+                              <Font size="18.0" fx:id="x1122111" />
+                           </font>
+                           <textFill>
+                              <Color blue="0.624" green="0.624" red="0.624" fx:id="x2122111" />
+                           </textFill>
+                        </Label>
+                        <TextField fx:id="txtChi1" disable="true" layoutX="94.0" layoutY="484.0" prefHeight="26.0" prefWidth="82.0" visible="false" />
+                        <Label fx:id="lbl21" alignment="CENTER" layoutX="36.0" layoutY="474.0" prefHeight="21.0" prefWidth="28.0" style="&#10;" text="2" textAlignment="CENTER" visible="false" wrapText="false">
+                           <font>
+                              <Font size="11.0" fx:id="x11221111" />
+                           </font>
+                           <textFill>
+                              <Color blue="0.624" green="0.624" red="0.624" fx:id="x21221111" />
+                           </textFill>
+                        </Label>
+                        <TextField fx:id="txtSeRechaza1" disable="true" layoutX="36.0" layoutY="527.0" visible="false" />
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="569.0" prefWidth="383.0">
+                           <children>
+                              <Button fx:id="btnVerTablaChi11" layoutX="248.0" layoutY="481.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="105.0" text="TABLA" visible="false">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</VBox>

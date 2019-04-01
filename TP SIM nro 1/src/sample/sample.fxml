@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.1854990583804143, 0.6167608286252354" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <AnchorPane prefHeight="569.0" prefWidth="183.0">
+        <children>
+         <AnchorPane fx:id="pantallaIzquierda" layoutX="10.0" layoutY="10.0" prefHeight="569.0" prefWidth="183.0" visible="false">
+            <children>
+               <Label fx:id="lblX0" alignment="CENTER" layoutX="14.0" layoutY="56.0" prefHeight="21.0" prefWidth="37.0" style="&#10;" text="Xo" textAlignment="CENTER" wrapText="false">
+                  <font>
+                     <Font size="18.0" fx:id="x1111" />
+                  </font>
+                  <textFill>
+                     <Color blue="0.624" green="0.624" red="0.624" />
+                  </textFill>
+               </Label>
+               <TextField fx:id="txtX0" layoutX="82.0" layoutY="54.0" prefHeight="20.0" prefWidth="75.0" text=" " />
+               <Label fx:id="lblk" alignment="CENTER" layoutX="14.0" layoutY="111.0" prefHeight="21.0" prefWidth="37.0" style="&#10;" text="k" textAlignment="CENTER" wrapText="false">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <textFill>
+                     <Color blue="0.624" green="0.624" red="0.624" />
+                  </textFill>
+               </Label>
+               <TextField fx:id="txtK" layoutX="82.0" layoutY="109.0" prefHeight="20.0" prefWidth="75.0" text=" " />
+               <Label fx:id="lblg" alignment="CENTER" layoutX="14.0" layoutY="169.0" prefHeight="21.0" prefWidth="37.0" style="&#10;" text="g" textAlignment="CENTER" wrapText="false">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <textFill>
+                     <Color blue="0.624" green="0.624" red="0.624" />
+                  </textFill>
+               </Label>
+               <TextField fx:id="txtG" layoutX="82.0" layoutY="167.0" prefHeight="20.0" prefWidth="75.0" text=" " />
+               <Label fx:id="lblc" alignment="CENTER" layoutX="14.0" layoutY="231.0" prefHeight="21.0" prefWidth="37.0" style="&#10;" text="c" textAlignment="CENTER" wrapText="false">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <textFill>
+                     <Color blue="0.624" green="0.624" red="0.624" />
+                  </textFill>
+               </Label>
+               <TextField fx:id="txtC" layoutX="82.0" layoutY="228.0" prefHeight="20.0" prefWidth="75.0" text=" " />
+               <TextField fx:id="txtM" layoutX="61.0" layoutY="319.0" prefHeight="26.0" prefWidth="61.0" text=" " />
+               <TextField fx:id="txtIntervalos" layoutX="63.0" layoutY="410.0" prefHeight="26.0" prefWidth="61.0" text=" ">
+                  <font>
+                     <Font size="11.0" />
+                  </font>
+               </TextField>
+               <Button fx:id="btnGenerar" layoutX="48.0" layoutY="480.0" mnemonicParsing="false" onAction="#generar" prefHeight="40.0" prefWidth="94.0" text="GENERAR">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Button>
+               <Button fx:id="btnClear" layoutX="59.0" layoutY="448.0" mnemonicParsing="false" onAction="#clear" prefHeight="40.0" prefWidth="94.0" text="LIMPIAR" visible="false">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Button>
+               <Label fx:id="lblM" alignment="CENTER" layoutX="24.0" layoutY="291.0" prefHeight="21.0" prefWidth="144.0" style="&#10;" text="Cantidad a generar" textAlignment="CENTER" wrapText="false">
+                  <textFill>
+                     <Color blue="0.624" green="0.624" red="0.624" />
+                  </textFill>
+               </Label>
+               <Label fx:id="lblInt" alignment="CENTER" layoutX="51.0" layoutY="380.0" prefHeight="21.0" prefWidth="82.0" style="&#10;" text="Intervalos" textAlignment="CENTER" wrapText="false">
+                  <textFill>
+                     <Color blue="0.624" green="0.624" red="0.624" />
+                  </textFill>
+               </Label>
+            </children>
+         </AnchorPane>
+         <Hyperlink fx:id="btnVolverA" layoutX="10.0" layoutY="10.0" onAction="#volverA" text="← Volver al Menú" textFill="#3009a8" underline="true" visible="false" />
+         <Hyperlink fx:id="btnVolverMenu" layoutX="10.0" layoutY="10.0" onAction="#volverMenu" text="← Volver al Menú Principal" textFill="#2c048a" underline="true" visible="false" />
+        </children>
+    </AnchorPane>
+    <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="628.0" prefWidth="240.0">
+        <children>
+            <AnchorPane id="Content" fx:id="pantallaMenuA" layoutX="10.0" layoutY="10.0" minHeight="-1.0" minWidth="-1.0" prefHeight="608.0" prefWidth="315.0" visible="false">
+                <children>
+                    <Button fx:id="btnMultiplicativo" layoutX="46.0" layoutY="265.0" mnemonicParsing="false" onAction="#metodoMultiplicativo" prefHeight="63.0" prefWidth="206.0" text="MÉTODO MULTIPLICATIVO">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="btnLineal" layoutX="49.0" layoutY="106.0" mnemonicParsing="false" onAction="#metodoLineal" prefHeight="62.0" prefWidth="199.0" text="MÉTODO LINEAL">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Button>
+                </children>
+            </AnchorPane>
+            <AnchorPane id="Content" fx:id="pantallaNrosAleatorios" layoutX="10.0" layoutY="10.0" minHeight="-1.0" minWidth="-1.0" prefHeight="608.0" prefWidth="315.0" visible="false">
+                <children>
+                    <TableView fx:id="tablaNums" layoutX="14.0" layoutY="19.0" prefHeight="393.0" prefWidth="199.0" AnchorPane.bottomAnchor="196.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="19.0" />
+                    <Button fx:id="btnNext" layoutX="164.0" layoutY="482.0" mnemonicParsing="false" onAction="#siguiente" prefHeight="29.0" prefWidth="102.0" text="GENERAR OTRO" textAlignment="JUSTIFY">
+                        <font>
+                            <Font size="9.0" />
+                        </font>
+                    </Button>
+                    <Label fx:id="lblm" alignment="CENTER" layoutX="14.0" layoutY="446.0" prefHeight="21.0" prefWidth="37.0" style="&#10;" text="m" textAlignment="CENTER" wrapText="false">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                        <textFill>
+                            <Color blue="0.624" green="0.624" red="0.624" fx:id="x2121" />
+                        </textFill>
+                    </Label>
+                    <Label fx:id="lbla" alignment="CENTER" layoutX="14.0" layoutY="485.0" prefHeight="21.0" prefWidth="37.0" style="&#10;" text="a" textAlignment="CENTER" wrapText="false">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                        <textFill>
+                            <Color blue="0.624" green="0.624" red="0.624" />
+                        </textFill>
+                    </Label>
+                    <TextField fx:id="txtm" disable="true" layoutX="69.0" layoutY="444.0" prefHeight="26.0" prefWidth="50.0" />
+                    <TextField fx:id="txta" disable="true" layoutX="69.0" layoutY="483.0" prefHeight="26.0" prefWidth="49.0" />
+               </children>
+            </AnchorPane>
+            <TextField fx:id="txtInfo" disable="true" editable="false" prefHeight="26.0" prefWidth="340.0" visible="false" />
+            <AnchorPane id="Content" fx:id="pantallaMenu" layoutX="10.0" layoutY="10.0" minHeight="-1.0" minWidth="-1.0" prefHeight="628.0" prefWidth="340.0">
+                <children>
+                    <Button fx:id="btnB" layoutX="50.0" layoutY="266.0" mnemonicParsing="false" onAction="#puntoB" prefHeight="62.0" prefWidth="199.0" text="PUNTO B">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="btnA" layoutX="49.0" layoutY="106.0" mnemonicParsing="false" onAction="#puntoA" prefHeight="62.0" prefWidth="199.0" text="PUNTO A">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="btnC" layoutX="50.0" layoutY="415.0" mnemonicParsing="false" onAction="#puntoC" prefHeight="62.0" prefWidth="199.0" text="PUNTO C">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Button>
+                    <TextField disable="true" visible="false" />
+                </children>
+            </AnchorPane>
+        </children>
+    </AnchorPane>
+    <AnchorPane minWidth="-Infinity" prefHeight="638.0" prefWidth="690.0">
+        <children>
+            <AnchorPane fx:id="pantallaChiCuadrado" layoutX="10.0" layoutY="10.0" prefHeight="618.0" prefWidth="628.0" visible="false">
+                <children>
+               <BarChart fx:id="grafico" layoutX="-2.0" layoutY="308.0" prefHeight="333.0" prefWidth="409.0" title="Histograma">
+                  <xAxis>
+                     <CategoryAxis fx:id="ejeX" side="BOTTOM" />
+                  </xAxis>
+                  <yAxis>
+                     <NumberAxis fx:id="ejeY" side="LEFT" />
+                  </yAxis>
+               </BarChart>
+                    <TableView fx:id="tablaChiCuadrado" layoutX="12.0" prefHeight="284.0" prefWidth="387.0" />
+                    <Label fx:id="lblCac" alignment="CENTER" layoutX="414.0" layoutY="43.0" prefHeight="21.0" prefWidth="61.0" style="&#10;" text="C(ac)" textAlignment="CENTER" wrapText="false">
+                        <font>
+                            <Font size="18.0" fx:id="x112211" />
+                        </font>
+                        <textFill>
+                            <Color blue="0.624" green="0.624" red="0.624" fx:id="x212211" />
+                        </textFill>
+                    </Label>
+                    <TextField fx:id="txtCac" disable="true" layoutX="494.0" layoutY="41.0" prefHeight="26.0" prefWidth="82.0" />
+                    <Label fx:id="lblChi" alignment="CENTER" layoutX="414.0" layoutY="97.0" prefHeight="21.0" prefWidth="44.0" style="&#10;" text="X" textAlignment="CENTER" wrapText="false">
+                        <font>
+                            <Font size="22.0" fx:id="x1122111" />
+                        </font>
+                        <textFill>
+                            <Color blue="0.624" green="0.624" red="0.624" fx:id="x2122111" />
+                        </textFill>
+                    </Label>
+                    <TextField fx:id="txtChi" disable="true" layoutX="494.0" layoutY="94.0" prefHeight="26.0" prefWidth="82.0" />
+                    <Label fx:id="lbl2" alignment="CENTER" layoutX="431.0" layoutY="84.0" prefHeight="21.0" prefWidth="28.0" style="&#10;" text="2" textAlignment="CENTER" wrapText="false">
+                        <font>
+                            <Font size="11.0" fx:id="x11221111" />
+                        </font>
+                        <textFill>
+                            <Color blue="0.624" green="0.624" red="0.624" fx:id="x21221111" />
+                        </textFill>
+                    </Label>
+                    <TextField fx:id="txtSeRechaza" disable="true" layoutX="414.0" layoutY="190.0" />
+               <Label fx:id="lblGradosDeLib" alignment="CENTER" layoutX="415.0" layoutY="122.0" prefHeight="21.0" prefWidth="61.0" style="&#10;" textAlignment="CENTER" wrapText="false">
+                  <font>
+                     <Font size="11.0" fx:id="x112211111" />
+                  </font>
+                  <textFill>
+                     <Color blue="0.624" green="0.624" red="0.624" fx:id="x212211111" />
+                  </textFill>
+               </Label>
+               <Label fx:id="lblConfianza" alignment="CENTER" layoutX="415.0" layoutY="133.0" prefHeight="21.0" prefWidth="61.0" style="&#10;" textAlignment="CENTER" wrapText="false">
+                  <font>
+                     <Font size="11.0" fx:id="x1122111111" />
+                  </font>
+                  <textFill>
+                     <Color blue="0.624" green="0.624" red="0.624" fx:id="x2122111111" />
+                  </textFill>
+               </Label>
+                </children>
+            </AnchorPane>
+        </children>
+    </AnchorPane>
+
+</SplitPane>
